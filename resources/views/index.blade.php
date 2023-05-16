@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Liste les régions</title>
+  <title>Liste les abonne</title>
 
 
 
@@ -42,15 +42,15 @@
     </thead>
 
     <tbody>
-      @foreach($region as $region)
+      @foreach($rubrique as $rubrique)
       <tr>
-        <td>{{$region->id}}</td>
-        <td>{{$region->label}}</td>
+        <td>{{$rubrique->id}}</td>
+        <td>{{$rubrique->nom}}</td>
         <td>
           @method('DELETE')
-          <a href="/region_delete/{{$region->id}}" class="btn btn-outline-danger">Supprimer</a>
+          <a href="/abonne_delete/{{$abonne->id}}" class="btn btn-outline-danger">Supprimer</a>
 
-          <a href="/form_update_region/{{$region ->id}}" class="btn btn-outline-primary">Editer</a>
+          <a href="/form_update_abonne/{{$abonne ->id}}" class="btn btn-outline-primary">Editer</a>
         </td>
       </tr>
       @endforeach
