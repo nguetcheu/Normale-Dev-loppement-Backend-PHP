@@ -19,7 +19,7 @@
 <body>
   <div class="card uper">
     <div class="card-header text-center">
-      Ajouter un abonne
+      Ajouter une motivation
     </div>
 
     <div class="card-body">
@@ -39,8 +39,8 @@
             <form method="post" action="/abonne_store">
               @csrf
               <div class="form-group">
-                <label for="nom">Nom:</label>
-                <input type="text" class="form-control" name="nom" />
+                <label for="intitule">Intitule:</label>
+                <input type="text" class="form-control" name="intitule" />
               </div>
 
               <label for="prenom">Prenom:</label>

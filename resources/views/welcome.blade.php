@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <a href="/liste_client" class="btn btn-outline-danger"> Lister les abonnes </a>
+                <a href="/liste_client" class="btn btn-outline-danger"> Lister les Motivations </a>
             </div>
         </div>
     </div>

@@ -17,9 +17,9 @@ class Motivation extends Controller
     public function index()
     {
         //
-        $abonne = Abonne::all();
+        $motivation = Abonne::all();
 
-        return view('liste_abonne', compact('abonne'));
+        return view('liste_motivation', compact('motivation'));
     }
 
     /**
@@ -28,11 +28,6 @@ class Motivation extends Controller
     public function create()
     {
         //
-        $rubrique = Rubrique::all();
-        return view('formulaire_abonne', compact('rubrique'));
-
-        $news = Newsletter::all();
-        return view('formulaire_abonne', compact('news'));
     }
 
     /**
@@ -76,15 +71,7 @@ class Motivation extends Controller
      */
     public function edit(string $id)
     {
-        //
-        try {
-            DB::beginTransaction();
-            $abonne = Abonne::find($id);
-            DB::commit();
-            return view('/update_abonne', compact("abonne"));
-        } catch (\Throwable $th) {
-            return back();
-        }
+       
     }
 
     /**
@@ -127,7 +114,7 @@ class Motivation extends Controller
             DB::beginTransaction();
             Abonne::find($id)->delete();
             DB::commit();
-            return view('/liste_abonne')->with('success', 'Abonne supprimé avec succes');
+            return view('/liste_motivation')->with('success', 'Motivation supprimé avec succes');
         } catch (\Throwable $th) {
             return back();
         }
